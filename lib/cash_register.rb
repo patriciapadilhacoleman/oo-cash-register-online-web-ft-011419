@@ -27,6 +27,7 @@ class CashRegister
     @price = price
     @quantity = quantity
     @total += price * quantity
+    for i < quantity
     @items << @title
     
   end
