@@ -1,3 +1,5 @@
+require "pry"
+
 class CashRegister
   
  attr_accessor :total, :discount, :title, :price, :quantity 
@@ -26,6 +28,9 @@ class CashRegister
   def apply_discount
     
     @total = @total * (@discount/100)
+    
+    binding.pry
+    
     puts "After the discount, the total comes to #{@total}."
     
   end
