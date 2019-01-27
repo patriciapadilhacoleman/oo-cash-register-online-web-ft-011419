@@ -2,19 +2,19 @@ require "pry"
 
 class CashRegister
   
- attr_accessor :discount, :title, :price, :quantity 
- @@total
+ attr_accessor :total,:discount, :title, :price, :quantity 
+
  
   def initialize(discount = 100)
     
-    @@total = 0
+    @total = 0
     @discount = discount
     
   end
   
   def self.total
     
-    @@total
+    @total
     
   end
   
@@ -23,14 +23,15 @@ class CashRegister
     @title = title
     @price = price
     @quantity = quantity
-    @@total += price * quantity
+    @total += price * quantity
     
   end
   
   def apply_discount
     
+    discount = discount/100.to_f
     binding.pry
-    @@total = @@total - (@@total * (discount/100))
+    @total = @total - (@total * discount)
     
     
     puts "After the discount, the total comes to #{@total}."
