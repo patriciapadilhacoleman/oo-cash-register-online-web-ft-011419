@@ -44,5 +44,10 @@ class CashRegister
     
   end
   
+  def items
+    
+  end
+  
+  def 
   
 end
