@@ -1,1 +1,5 @@
-
+class CashRegister
+  
+  def 
+  
+end
